@@ -1,9 +1,9 @@
 const express = require("express");
-
+const path = require("path");
 require("dotenv").config();
 const app = express();
 const stripe = require("stripe")(process.env.API_KEY);
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 const YOUR_DOMAIN = "http://localhost:3000";
 
