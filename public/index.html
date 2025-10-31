@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy cool new product</title>
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <script src="https://js.stripe.com/clover/stripe.js"></script>
   </head>
   <body>
-    <h1 class="text">hello world</h1>
-    <script src="script.js"></script>
+    <section>
+      <div class="product">
+        <img
+          src="https://i.imgur.com/EHyR2nP.png"
+          alt="The cover of Stubborn Attachments"
+        />
+        <div class="description">
+          <h3>Stubborn Attachments</h3>
+          <h1>hi</h1>
+          <h5>$20.00</h5>
+        </div>
+      </div>
+      <form action="/create-checkout-session" method="POST">
+        <button type="submit" id="checkout-button">Checkout</button>
+      </form>
+    </section>
   </body>
 </html>
