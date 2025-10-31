@@ -1,9 +1,8 @@
-// This is your test secret API key.
-const stripe = require("stripe")(
-  "sk_test_51MDByrCPUlgPkhlPzIse0YH4tvZYIJtr9pfW4JdrNuWZJhhYmx95l6d9ri8B9DHKMexbHM2bnRgNkU2Wd5jxLpAT002rNYJhHN"
-);
 const express = require("express");
+
+require("dotenv").config();
 const app = express();
+const stripe = require("stripe")(process.env.API_KEY);
 app.use(express.static("public"));
 
 const YOUR_DOMAIN = "http://localhost:3000";
